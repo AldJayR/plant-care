@@ -10,6 +10,10 @@ fresh
 0
 2024-11-24
 HEALTH_RECORDS
+2024-11-24
+healthy
+none
+repotted
 END_HEALTH_RECORDS
 PLANT
 diamond

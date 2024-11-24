@@ -421,8 +421,7 @@ void getCareInstructions() {
         cout << "    • Overwatering (yellowing, soft leaves)\n";
         cout << "    • Stretching (not enough light)\n";
         cout << "    • Root rot (black stems, mushy base)\n";
-}
-else if (species == "Fern") {
+    } else if (species == "Fern") {
         cout << YELLOW << "\n    🌞 LIGHT & TEMPERATURE\n" << RESET;
         cout << "    • Indirect, filtered light\n";
         cout << "    • Avoid direct sunlight\n";
@@ -442,8 +441,7 @@ else if (species == "Fern") {
         cout << "    • Brown fronds (low humidity)\n";
         cout << "    • Yellowing (overwatering)\n";
         cout << "    • Crispy tips (dry air)\n";
-}
-else {
+    } else {
         cout << YELLOW << "\n    🌞 GENERAL PLANT CARE GUIDE\n" << RESET;
         cout << "    • Check light requirements for your specific plant\n";
         cout << "    • Most plants prefer indirect light\n";
@@ -463,10 +461,10 @@ else {
         cout << "    • Yellow leaves often indicate overwatering\n";
         cout << "    • Brown edges usually mean too dry\n";
         cout << "    • Check for pests regularly\n";
-}
+    }
 
     printDivider();
-    cout << CYAN << "\n    📊 Current Status:\n" << RESET;
+    cout << CYAN << "\n    Current Status:\n" << RESET;
     cout << "    • Next watering due: " << (plants[choice-1].nextWateringDate < getCurrentDate() ? RED : GREEN)
          << plants[choice-1].nextWateringDate << RESET << "\n";
     cout << "    • Current pot size: " << plants[choice-1].potSize << "\n";
