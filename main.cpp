@@ -50,7 +50,7 @@ const string PLANT_HEADER = R"(
 
 const string PLANT_FOOTER = R"(
     /======================================\
-    |    Thank you for caring for your plants!|
+    | Thank you for caring for your plants!|
     \======================================/
 )";
 
@@ -676,14 +676,14 @@ void mainMenu() {
         if (hasAlerts) printDivider();
 
         cout << CYAN << "\n    🌿 Main Menu:\n" << RESET;
-        cout << GREEN << "    1. " << RESET << "🌱 Add New Plant\n";
-        cout << GREEN << "    2. " << RESET << "📋 View Plant History\n";
-        cout << GREEN << "    3. " << RESET << "✏️  Update Plant\n";
-        cout << GREEN << "    4. " << RESET << "❌ Delete Plant\n";
-        cout << GREEN << "    5. " << RESET << "🏥 Record Health Check\n";
-        cout << GREEN << "    6. " << RESET << "💧 Record Watering\n";
-        cout << GREEN << "    7. " << RESET << "📖 Get Care Instructions\n";
-        cout << GREEN << "    8. " << RESET << "🚪 Exit\n";
+        cout << GREEN << "    1. " << RESET << "Add New Plant\n";
+        cout << GREEN << "    2. " << RESET << "View Plant History\n";
+        cout << GREEN << "    3. " << RESET << "Update Plant\n";
+        cout << GREEN << "    4. " << RESET << "Delete Plant\n";
+        cout << GREEN << "    5. " << RESET << "Record Health Check\n";
+        cout << GREEN << "    6. " << RESET << "Record Watering\n";
+        cout << GREEN << "    7. " << RESET << "Get Care Instructions\n";
+        cout << GREEN << "    8. " << RESET << "Exit\n";
 
         printDivider();
         cout << CYAN << "    Choice: " << RESET;
