@@ -1,0 +1,26 @@
+PLANT
+sword plant
+succulent
+bedroom
+daily
+2024-11-24
+Not yet fertilized
+fresh
+10
+0
+2024-11-24
+HEALTH_RECORDS
+END_HEALTH_RECORDS
+PLANT
+diamond
+test
+test
+Weekly
+2024-11-24
+Not yet fertilized
+fresh
+pot
+0
+2024-12-01
+HEALTH_RECORDS
+END_HEALTH_RECORDS

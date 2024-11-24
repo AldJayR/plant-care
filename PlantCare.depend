@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1732441873 source:c:\users\asus\documents\crud systems\plantcare\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	<ctime>
+	<fstream>
+	<windows.h>
+	<algorithm>
+	<iomanip>
+	<sstream>
+
