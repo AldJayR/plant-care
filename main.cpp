@@ -64,24 +64,6 @@ const string SMALL_PLANT = R"(
 
 vector<Plant> plants;
 
-void printBoxedText(const string& text, const string& color = "") {
-    int width = text.length() + 4;
-    cout << color;
-    cout << "    +" << string(width - 2, '-') << "+\n";
-    cout << "    | " << text << " |\n";
-    cout << "    +" << string(width - 2, '-') << "+\n";
-    cout << RESET;
-}
-
-
-void printDivider() {
-    cout << DIM << "    ────────────────────────────────────────\n" << RESET;
-}
-
-void clearScreen() {
-    system("cls");
-}
-
 // Plant-related functions
 void addNewPlant();
 void viewPlantHistory();
@@ -102,6 +84,9 @@ string getCurrentDate();
 string calculateNextWateringDate(const string& frequency, const string& lastWatered);
 void pauseProgram(int time);
 void mainMenu();
+void printBoxedText(const string& text, const string& color);
+void printDivider();
+void clearScreen();
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
@@ -737,4 +722,23 @@ void mainMenu() {
             cin.get();
         }
     }
+}
+
+
+void printBoxedText(const string& text, const string& color) {
+    int width = text.length() + 4;
+    cout << color;
+    cout << "    +" << string(width - 2, '-') << "+\n";
+    cout << "    | " << text << " |\n";
+    cout << "    +" << string(width - 2, '-') << "+\n";
+    cout << RESET;
+}
+
+
+void printDivider() {
+    cout << DIM << "    ────────────────────────────────────────\n" << RESET;
+}
+
+void clearScreen() {
+    system("cls");
 }
