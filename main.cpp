@@ -131,6 +131,7 @@ void addNewPlant() {
 void viewPlantHistory() {
     if (plants.empty()) {
         cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -173,6 +174,7 @@ void viewPlantHistory() {
 void updatePlant() {
     if (plants.empty()) {
         cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -254,6 +256,7 @@ void updatePlant() {
 void deletePlant() {
     if (plants.empty()) {
         cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -284,6 +287,7 @@ void deletePlant() {
 void recordHealthCheck() {
     if (plants.empty()) {
         cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -331,6 +335,7 @@ void recordHealthCheck() {
 void waterPlant() {
     if (plants.empty()) {
         cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -347,6 +352,7 @@ void waterPlant() {
 
     if (!plantsNeedWatering) {
         cout << "No plants need watering at this time!\n";
+        Sleep(1500);
         return;
     }
 
@@ -376,7 +382,7 @@ void waterPlant() {
 void getCareInstructions() {
     if (plants.empty()) {
         printBoxedText("No plants registered yet!", YELLOW);
-        cout << "\nNo plants registered yet!\n";
+        Sleep(1500);
         return;
     }
 
@@ -402,62 +408,62 @@ void getCareInstructions() {
     printBoxedText("Care Guide for " + plants[choice-1].name + " (" + species + ")", CYAN + BOLD);
 
     if (species == "Succulent") {
-        cout << YELLOW << "\n    🌞 LIGHT & TEMPERATURE\n" << RESET;
+        cout << YELLOW << "\n    LIGHT & TEMPERATURE\n" << RESET;
         cout << "    - Bright, direct sunlight (6+ hours daily)\n";
         cout << "    - Rotate pot for even growth\n";
         cout << "    - Prefer warm, dry conditions\n";
 
-        cout << BLUE << "\n    💧 WATERING\n" << RESET;
+        cout << BLUE << "\n    WATERING\n" << RESET;
         cout << "    - Water sparingly when soil is dry\n";
         cout << "    - Avoid getting leaves wet\n";
         cout << "    - Reduce watering in winter\n";
 
-        cout << GREEN << "\n    🌱 SOIL & DRAINAGE\n" << RESET;
+        cout << GREEN << "\n    SOIL & DRAINAGE\n" << RESET;
         cout << "    - Well-draining cactus/succulent mix\n";
         cout << "    - Add perlite or sand for drainage\n";
         cout << "    - Pot must have drainage holes\n";
 
-        cout << RED << "\n    ⚠️ COMMON ISSUES\n" << RESET;
+        cout << RED << "\n     COMMON ISSUES\n" << RESET;
         cout << "    - Overwatering (yellowing, soft leaves)\n";
         cout << "    - Stretching (not enough light)\n";
         cout << "    - Root rot (black stems, mushy base)\n";
     } else if (species == "Fern") {
-        cout << YELLOW << "\n    🌞 LIGHT & TEMPERATURE\n" << RESET;
+        cout << YELLOW << "\n     LIGHT & TEMPERATURE\n" << RESET;
         cout << "    - Indirect, filtered light\n";
         cout << "    - Avoid direct sunlight\n";
         cout << "    - Prefer cool, humid conditions\n";
 
-        cout << BLUE << "\n    💧 WATERING\n" << RESET;
+        cout << BLUE << "\n    WATERING\n" << RESET;
         cout << "    - Keep soil consistently moist\n";
         cout << "    - Mist leaves regularly\n";
         cout << "    - Never let soil dry completely\n";
 
-        cout << GREEN << "\n    🌱 SOIL & DRAINAGE\n" << RESET;
+        cout << GREEN << "\n    SOIL & DRAINAGE\n" << RESET;
         cout << "    - Rich, organic potting mix\n";
         cout << "    - Add peat moss for moisture\n";
         cout << "    - Good drainage essential\n";
 
-        cout << RED << "\n    ⚠️ COMMON ISSUES\n" << RESET;
+        cout << RED << "\n     COMMON ISSUES\n" << RESET;
         cout << "    - Brown fronds (low humidity)\n";
         cout << "    - Yellowing (overwatering)\n";
         cout << "    - Crispy tips (dry air)\n";
     } else {
-        cout << YELLOW << "\n    🌞 GENERAL PLANT CARE GUIDE\n" << RESET;
+        cout << YELLOW << "\n    GENERAL PLANT CARE GUIDE\n" << RESET;
         cout << "    - Check light requirements for your specific plant\n";
         cout << "    - Most plants prefer indirect light\n";
         cout << "    - Maintain consistent temperature\n";
 
-        cout << BLUE << "\n    💧 WATERING BASICS\n" << RESET;
+        cout << BLUE << "\n    WATERING BASICS\n" << RESET;
         cout << "    - Check soil moisture before watering\n";
         cout << "    - Water thoroughly, then allow to drain\n";
         cout << "    - Adjust watering based on season\n";
 
-        cout << GREEN << "\n    🌱 SOIL & POTTING\n" << RESET;
+        cout << GREEN << "\n    SOIL & POTTING\n" << RESET;
         cout << "    - Use appropriate potting mix\n";
         cout << "    - Ensure pot has drainage holes\n";
         cout << "    - Repot when roots outgrow container\n";
 
-        cout << RED << "\n    ⚠️ GENERAL TROUBLESHOOTING\n" << RESET;
+        cout << RED << "\n     GENERAL TROUBLESHOOTING\n" << RESET;
         cout << "    - Yellow leaves often indicate overwatering\n";
         cout << "    - Brown edges usually mean too dry\n";
         cout << "    - Check for pests regularly\n";
@@ -471,7 +477,7 @@ void getCareInstructions() {
     cout << "    • Soil type: " << plants[choice-1].soilType << endl;
 
     if (plants[choice-1].needsRepotting) {
-        printBoxedText("⚠️  This plant needs repotting!", YELLOW + BOLD);
+        printBoxedText(" This plant needs repotting!", YELLOW + BOLD);
     }
    returnToMainMenu();
 }
@@ -498,10 +504,10 @@ void displayPlant(const Plant& plant) {
     cout << endl;
 
     cout << CYAN << "\n    Care Status:\n" << RESET;
-    cout << "    • Soil Type: " << plant.soilType << endl;
-    cout << "    • Pot Size: " << plant.potSize << endl;
-    cout << "    • Needs Repotting: " << (plant.needsRepotting ? RED + BOLD + "Yes!" : GREEN + "No") << RESET << endl;
-    cout << "    • Last Fertilized: " << plant.lastFertilized << endl;
+    cout << "    - Soil Type: " << plant.soilType << endl;
+    cout << "    - Pot Size: " << plant.potSize << endl;
+    cout << "    - Needs Repotting: " << (plant.needsRepotting ? RED + BOLD + "Yes!" : GREEN + "No") << RESET << endl;
+    cout << "    - Last Fertilized: " << plant.lastFertilized << endl;
 
     if (plant.nextWateringDate < getCurrentDate()) {
         printBoxedText("WATERING ALERT: This plant needs watering!", RED + BOLD);
@@ -575,8 +581,6 @@ void loadFromFile() {
         file.close();
     }
 }
-
-// Helper
 
 void returnToMainMenu() {
     cout << "\nPress any key to exit...";
